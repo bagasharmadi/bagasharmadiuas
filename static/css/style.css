@@ -1,0 +1,23 @@
+section {
+  border: 5px groove white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #90A4AE;
+  float: left;
+  margin: 15px;
+  padding: 20px;
+  width: auto;
+  background-color: turquoise;
+}
+
+#wrap {border: 2px solid red ;} 
+
+.footer {
+  clear: both;
+  margin-top: 10px;
+  background-color: #eee;
+  padding: 10px 8px;
+}
+
+
+
+

@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+
+{% endblock meta %}
+
+{% block content %}
+<html lang="en">
+
+  <head>
+    <title>Mathematic Function Plot</title>
+    <meta charset="utf-8">
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://mauriciopoppe.github.io/function-plot/js/function-plot.js"></script>
+    <link rel="stylesheet" type="text/css" href="./static/css/style.css"> 
+    <br>
+
+    
+
+  </head>
+
+  <body style="background-image: url(./static/img/background2.jpg);" onload="plotCurve();">
+    
+    
+    <div class="menu">
+      <!-- As a link -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><bold>MATHEMATICS UIN MALANG</bold></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Metode Numerik</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Grafik Fungsi</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Kalkulator</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">About</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">About</a></li>
+        <li class="dropdown"><a href="#">"News"</a></li>
+        <ul>
+          <li><a href="#">SIN</a></li>
+          <li><a href="#">COS</a></li>
+        </ul>
+      </ul> -->
+    </div>
+  
+
+    <div  class="wrap">
+      <section id="settings">
+        <h2>Settings</h2>
+        <label for="xMin">xMin: </label>
+        <input type="number" id="xMin" value=0 step=0.5 oninput="plotCurve();">
+        <br> <br>
+        <label for="xMax">xMax: </label>
+        <input type="number" id="xMax" value=10 step=0.5 oninput="plotCurve();">
+        <br> <br>
+        <label for="yMin">yMin: </label>
+        <input type="number" id="yMin" value=-1 step=0.5 oninput="plotCurve();">
+        <br> <br>
+        <label for="yMax">yMax: </label>
+        <input type="number" id="yMax" value=1 step=0.5 oninput="plotCurve();">
+        <br> <br>
+        <label for="color">Color</label>
+        <input type="color" id="color" onchange="plotCurve();">
+        <br> <br>
+        <label for="function">Function</label>
+        <input type="text" id="function" value="sin(x)" onchange="plotCurve();">
+        <br> <br>
+        <button onclick="plotCurve();">Plot The Function</button>
+      </section>
+      <section id="curve">
+        <div id="plot"></div>
+      </section>
+    </div>
+  <script src="./static/css/js.js"></script>
+
+    <div class="footer">
+      <bold><center>Copyright &copy; 2021   Bagas_Harmadi_18610113   </center></bold> 
+    </div>
+
+  </body>
+</html>
+
+{% endblock content %}
